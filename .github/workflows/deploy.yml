@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: deploy website to example.com
+      - name: deploy website to kemcse135.info
         uses: appleboy/scp-action@master
         env:
           HOST: ${{ secrets.HOST }}
@@ -14,5 +14,5 @@ jobs:
           KEY: ${{ secrets.KEY }}
         with:
           source: "dest/*"
-          target: "/var/www/example.com/public_html"
+          target: "/var/www/kemcse135.info/public_html"
           strip_components: 1
